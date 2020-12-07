@@ -1,0 +1,19 @@
+This framework is BDD page object model framework.
+
+I used page object model to maintain the web elements and BDD you can check in the test > java > Features
+In the feature files I used gherkin language to make the framework more understandable and each steps in the feature file are reusable.
+Basically less code but same testing this way framework is east to maintain.
+
+I used the singleton driver as well. Driver class is in the src > main > utilities > DriverClass. This helps me to use multiple page classes and page classes
+for easy to maintain web elements.
+
+I used ParentClass in the Pages package. This class is abstract because I have a multiple page classes and I need to switch between of them. Check the src>test>java> StepDefinition> stepUtils.
+In this class I have multiple abstract methods. Which is pushing all the child class have the same method. This way I do not need to create a step definition for each page class. 
+
+Run the Runner class it is in the src > main > java > Runners > RegressionRunner. After you run the runner class you can see the extends report. Which is in the target > ExtendReport.
+This report has better UI for report.
+To generate extendsreport check the runner class. Which has a after class and there is a plugin you need to get it is in the runner class(regression runner line 17).
+There are two plugins in the pom.xml(extentreports,cucumber-extentsreport). And there is one file in the src > test > java > features > extendReports.xml this file should be in the same
+location as feature files. Then run regression runner it will create a file under the target folder.
+
+
