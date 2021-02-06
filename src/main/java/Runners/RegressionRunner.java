@@ -17,7 +17,7 @@ import java.io.File;
                 "com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport/RegressionReport.html" // to generate a extend report we need this plugin
         },
 
-        tags = {"@Regression"},
+        tags = {"@Regression2"},
         features = {"src/test/java/Features"},
         glue = {"StepDefinition"},
         dryRun = false

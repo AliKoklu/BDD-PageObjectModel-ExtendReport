@@ -12,8 +12,13 @@ public class DriverClass {
     public static WebDriver getDriver(){
 
         if(driver==null){
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            if(ReadPropery.init_properties("browserName").equalsIgnoreCase("chrome")){
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
+            }else if(ReadPropery.init_properties("browserName").equalsIgnoreCase("firefox")){
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+            }
         }
         return driver;
     }

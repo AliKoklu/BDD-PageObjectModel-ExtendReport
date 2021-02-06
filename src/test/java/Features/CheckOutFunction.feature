@@ -1,6 +1,6 @@
 Feature: CheckOutFunction
 
-  @Regression
+  @Regression2
   Scenario: Checkout
 
 #    In the hooks class there is a before and after method
